@@ -48,6 +48,7 @@ We're going to be developing for iOS in this guide so you're going to want to ha
 
 ### React Native Architecture
   If you check out the root file directory of your newly created project folder, you should see:
+   
     ```
       index.ios.js
 
@@ -66,7 +67,6 @@ We're going to be developing for iOS in this guide so you're going to want to ha
       node_modules\
 
       package.json
-      
     ```
   
   Since we'll be focusing on iOS in these docs, ignore the android stuff for now. `index.ios.js` is our main ios file, in which we'll be writing most of our code. In the `iOS\` folder, you'll find the the iOS assets needed to build and run the app, including the main project file `*.xcodeproj`. If you click into `*.xcodeproj`, you'll open the default code in your XCode environment. `package.json` is a file that keeps track of your npm dependencies, which are located in `node_modules`. It also defines scripts that automate certain tasks like running your app. If you check it, it defines a `start` script in the `scripts` object. You can run `npm start` to run that script. 
