@@ -6,3 +6,7 @@ Twitter's feed, for example, can be broken down into a multiple, reusable compon
 ![Twitter](assets/02-components-and-jsx-twitter-example.png)
 A React developer would maybe separate the interface into a ProfileView component that displays information about your account, a TweetFeed component that contains a list of tweets from users you follow, as well as Trends and Who to Follow components. These components can also have their own components nested within them. For instance, the TweetFeed could have an individual Tweet component that specifies the structure and behavior of a tweet.
 
+
+// interpolate - "insert a javascript element or variable inside html" use curly braces
+// props or properties - "a means of communication between a parent and its child"
+  - used to customize content in child components

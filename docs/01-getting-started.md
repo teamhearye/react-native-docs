@@ -52,16 +52,22 @@ We're going to be developing for iOS in this guide so you're going to want to ha
  ```
   index.ios.js
   android.ios.js 
-  Android\
-  iOS\
-    \myDopeProject
-      \myDopeProject.xcodeproj
-    \myDopeProjectTests
-  node_modules\
+  Android/
+  iOS/
+    myDopeProject/
+      myDopeProject.xcodeproj
+    myDopeProjectTests/
+  node_modules/
   package.json
 ```
   
-  Since we'll be focusing on iOS in these docs, ignore the android stuff for now. `index.ios.js` is our main ios file, in which we'll be writing most of our code. In the `iOS\` folder, you'll find the the iOS assets needed to build and run the app, including the main project file `*.xcodeproj`. If you click into `*.xcodeproj`, you'll open the default code in your XCode environment. `package.json` is a file that keeps track of your npm dependencies, which are located in `node_modules`. It also defines scripts that automate certain tasks like running your app. If you check it, it defines a `start` script in the `scripts` object. You can run `npm start` to run that script. 
+  Since we'll be focusing on iOS in these docs, ignore the android stuff for now. 
+  Now there's a few things you need to know about what's going on under the hood:
+    1) `index.ios.js` is the file we're going to be writing our code in. It declares the [components](02-components-and-jsx.md) of our application, which instruct on how our elements should look and behave.
+    2) React Native (The JS Library we require in `index.ios.js`) translates our component definitions and makes them readable by React Native
+    3) React Native's packager bundles up all of our code and generates the ios project `myDopeProject.xcodeproj`. Note that React Native translates our JS code into iOS elements.
+    4) React Native finally renders our components on the screen of the device
+
 
 ### Run that shit
   In your root directory in your terminal, run `npm start`. Your app will now build and you should be able to see it in your iOS Simulator.
